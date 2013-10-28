@@ -1,0 +1,14 @@
+{
+  "name": "bpauli",
+  "version": "0.0.1",
+  "description": "bpauli.de web site",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpauli/bpauli.github.io.git"
+  },
+  "author": "Burkhard Pauli (mail@bpauli.de)",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}

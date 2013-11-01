@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
@@ -7,15 +7,34 @@ module.exports = function(grunt) {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
+
       build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+        src: ['src/js/plugins.js'],
+        dest: 'js/main.min.js'
+      }
+    },
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'src/css',
+          cssDir: 'css',
+          environment: 'production'
+        }
+      }
+    },
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src/js/',
+        src: 'jquery-1.10.2.min.js',
+        dest: 'js/'
       }
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
   grunt.registerTask('default', ['uglify']);

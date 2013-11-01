@@ -26,7 +26,8 @@ module.exports = function (grunt) {
       main: {
         expand: true,
         cwd: 'src/js/',
-        src: 'jquery-1.10.2.min.js',
+        src: ['jquery-1.10.2.min.js',
+          'modernizr-2.6.2.min.js'],
         dest: 'js/'
       }
     }

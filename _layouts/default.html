@@ -16,7 +16,22 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <header>
+          <div class="container">
+            <a href="/" title="Home">
+              <img src="/images/burkhard-pauli_logo.png" alt="Pauli - Web Development" class="logo"/>
+            </a>
+            <nav class="navbar navbar-default" role="navigation">
+              <ul class="nav navbar-nav">
+                <li{% if page.url contains "index.html" %} class="active"{% endif %}><a href="/">Home</a></li>
+                <li{% if page.url contains "/blog" %} class="active"{% endif %}><a href="/blog.html">Blog</a></li>
+                <li{% if page.url contains "/portfolio.html" %} class="active"{% endif %}><a href="/portfolio.html">Portfolio</a></li>
+                <li{% if page.url contains "/about.html" %} class="active"{% endif %}><a href="/about.html">About</a></li>
+                <li{% if page.url contains "/contact.html" %} class="active"{% endif %}><a href="/contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
         <div class="container">{{ content }}</div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

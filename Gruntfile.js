@@ -23,12 +23,18 @@ module.exports = function (grunt) {
       }
     },
     copy: {
-      main: {
+      jslib: {
         expand: true,
         cwd: 'src/js/',
         src: ['jquery-1.10.2.min.js',
           'modernizr-2.6.2.min.js'],
         dest: 'js/'
+      },
+      images: {
+        expand: true,
+        cwd: 'src/images',
+        src: '**',
+        dest: 'images/'
       }
     }
   });

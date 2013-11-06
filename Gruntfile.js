@@ -36,13 +36,31 @@ module.exports = function (grunt) {
         src: '**',
         dest: 'images/'
       }
+    },
+    watch: {
+      compass: {
+        files: 'src/**/*.scss',
+        tasks: 'compass:dist',
+        options: {
+          spawn: false
+        }
+      },
+      site: {
+        files: '_site/**/*.*',
+        tasks: '',
+        options: {
+          livereload: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('build', ['compass:dist', 'uglify']);
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['watch']);
 };

@@ -24,6 +24,11 @@ body, html {
   margin: 30px 0;
 }
 
+.social {
+  text-align: right;
+  padding: 15px;
+}
+
 .navbar-default {
   background-color: $white;
 }
@@ -40,7 +45,10 @@ body, html {
 }
 
 #footer {
-  background-color: #f5f5f5;
+  background-color: #e7e7e7;
+  .navbar-default {
+    background-color: transparent;
+  }
   .navbar-nav>li>a {
     padding-top: 20px;
     padding-bottom: 20px;

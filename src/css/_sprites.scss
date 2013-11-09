@@ -1,0 +1,28 @@
+@import "icons/*.png";
+@include all-icons-sprites;
+
+%icons-social {
+  display: inline-block;
+  height: 23px;
+  margin-left: 5px;
+}
+
+.icons-github {
+  @extend %icons-social;
+  width: 26px;
+}
+
+.icons-twitter {
+  @extend %icons-social;
+  width: 32px;
+}
+
+.icons-linkedin {
+  @extend %icons-social;
+  width: 23px;
+}
+
+.icons-xing {
+  @extend %icons-social;
+  width: 20px;
+}

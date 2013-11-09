@@ -19,14 +19,10 @@ body, html {
     height: 60px;
   }
 }
+
 .logo {
   display: inline-block;
   margin: 30px 0;
-}
-
-.social {
-  text-align: right;
-  padding: 15px;
 }
 
 .navbar-default {
@@ -38,6 +34,23 @@ body, html {
   border-radius: 0;
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
+}
+
+#header {
+  .row {
+    position: relative;
+  }
+  .social {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  .links {
+    margin-bottom: 30px;
+    text-align: right;
+    margin-right: 15px;
+    height: 23px;
+  }
 }
 
 #push, #footer {
@@ -61,3 +74,5 @@ body, html {
     }
   }
 }
+
+@import "sprites";

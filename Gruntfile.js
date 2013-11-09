@@ -14,11 +14,18 @@ module.exports = function (grunt) {
       }
     },
     compass: {
+      options: {
+        sassDir: 'src/css',
+        cssDir: 'css'
+      },
       dist: {
         options: {
-          sassDir: 'src/css',
-          cssDir: 'css',
           environment: 'production'
+        }
+      },
+      dev: {
+        options: {
+          environment: 'development'
         }
       }
     },
